@@ -1,0 +1,22 @@
+﻿@model List<Usuario>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (Model.Count() == 0){
+    <p class="text-center">No tenemos fotos para mostrar en este momento:(</p>
+} else{
+    <div class="row">
+        @foreach (var usuario in Model)
+        {
+            <div class="col-4 text-center">
+                <h2>@usuario.FechaRegistro</h2>
+                <p>@usuario.NombreFoto</p>
+                <p>@usuario.Nombre</p>
+               <a href=""><img src="@usuario.Foto" class="img-fluid" /></a>
+                
+                
+            </div>
+        }
+    </div>
+}
