@@ -26,7 +26,17 @@ namespace NUEVO_1._0.Controllers
             return View(usuarios);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+         public IActionResult Register()
+        {
+            return View();
+        }
+
+         public IActionResult Privacy()
         {
             return View();
         }
